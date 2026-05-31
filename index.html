@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Community Connect Initiative</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -13,32 +14,6 @@
       font-size: 11pt;
       background: #f9f7f4;
       color: #222;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      background: #2C5234;
-      color: #fff;
-      text-align: center;
-      padding: 48px 24px 40px;
-    }
-    .hero h1 {
-      font-weight: normal;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto;
-      line-height: 1.75;
-      color: #c8dac2;
-    }
-
-    /* ── Accent bar ── */
-    .accent-bar {
-      height: 5px;
-      background: linear-gradient(90deg, #B9975B, #d4b07a, #B9975B);
     }
 
     /* ── Section wrapper ── */
@@ -62,12 +37,65 @@
       padding: 40px 24px;
     }
     .why-list .section { padding-top: 0; padding-bottom: 0; }
-    .why-list ol {
-      padding-left: 20px;
+    .section-subtitle {
+      color: #888;
+      font-style: italic;
+      font-size: 0.95em;
+      margin-top: -20px;
+      margin-bottom: 28px;
+      padding-left: 16px;
     }
-    .why-list ol li {
-      margin-bottom: 10px;
-      line-height: 1.65;
+    .hhh-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 8px;
+    }
+    @media (max-width: 680px) {
+      .hhh-grid { grid-template-columns: 1fr; }
+    }
+    .hhh-card {
+      border-top: 4px solid #B9975B;
+      padding: 20px 18px 24px;
+      background: #f9f7f4;
+      border-radius: 4px;
+    }
+    .hhh-card h3 {
+      color: #2C5234;
+      font-size: 1.05em;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .hhh-card h3 i {
+      color: #B9975B;
+      font-size: 0.95em;
+      margin-right: 2px;
+    }
+    .hhh-card .hhh-subtitle {
+      font-size: 0.85em;
+      color: #888;
+      margin-bottom: 16px;
+      font-style: italic;
+    }
+    .hhh-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .hhh-card ul li {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      font-size: 0.95em;
+      padding-left: 14px;
+      position: relative;
+    }
+    .hhh-card ul li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: #B9975B;
+      font-weight: bold;
     }
 
     /* ── Pillar description ── */
@@ -298,138 +326,50 @@
 </head>
 <body>
 
-  <!-- Hero -->
-  <div class="hero">
-    <h1>Community Connect Initiative</h1>
-    <p>
-      Community Connect equips students to become Christ-centered servants who build meaningful relationships,
-      recognize the needs of others, and make a positive impact in their communities. Through service learning,
-      family engagement, mentorship, global literacy, gratitude practices, and community partnerships,
-      students learn that leadership begins with serving others.
-    </p>
-  </div>
-  <div class="accent-bar"></div>
-
   <!-- Why -->
   <div class="why-list">
     <div class="section">
       <h2 class="section-title">Why Community Connect?</h2>
-      <ol>
-        <li><strong>Cultivates Gratitude, Empathy, and Compassion</strong> — Through meaningful service experiences that shape students' hearts and perspectives.</li>
-        <li><strong>Encourages Positive Impact</strong> — Students recognize how their actions and choices can make a real difference in the lives of others.</li>
-        <li><strong>Connects Learning to Life</strong> — Classroom experiences are linked to real-world opportunities for service and stewardship.</li>
-        <li><strong>Strengthens Relationships</strong> — Builds meaningful connections among students, families, schools, and community partners.</li>
-        <li><strong>Develops Global Awareness</strong> — Fosters an understanding of responsible citizenship both locally and around the world.</li>
-        <li><strong>Provides Mentorship &amp; Leadership Opportunities</strong> — Students grow through collaboration, service, and opportunities to lead with purpose.</li>
-        <li><strong>Helps Students Discover Their Gifts</strong> — Empowers students to identify and use their God-given talents in service to others.</li>
-        <li><strong>Fosters a Lifelong Commitment to Community</strong> — Instills a lasting dedication to contributing with purpose and integrity.</li>
-        <li><strong>Reinforces Westminster's Mission</strong> — Develops Christ-centered leaders who influence the world for Christ by reflecting God's love through purposeful action.</li>
-        <li><strong>Transforms Service into a Mindset</strong> — Moves service from an activity students do into a mindset they carry throughout their lives.</li>
-      </ol>
+      <p class="section-subtitle">Head &bull; Heart &bull; Hands Learning Foundation</p>
+      <div class="hhh-grid">
+
+        <div class="hhh-card">
+          <h3><i class="fa-solid fa-lightbulb"></i> Head (Think)</h3>
+          <div class="hhh-subtitle">Understands Purpose, Learning, and Global Awareness</div>
+          <ul>
+            <li><strong>Connects Learning to Life</strong>Links  experiences to real-world service and stewardship.</li>
+            <li><strong>Develops Global Awareness</strong>Fosters responsible citizenship and understanding of needs locally and globally.</li>
+            <li><strong>Helps Students Discover Their Gifts</strong>Empowers students to identify and use their God-given talents in service to others.</li>
+          </ul>
+        </div>
+
+        <div class="hhh-card">
+          <h3><i class="fa-solid fa-heart"></i> Heart (Be)</h3>
+          <div class="hhh-subtitle">Forms Character, Values, and Lifelong Mindset</div>
+          <ul>
+            <li><strong>Cultivates Gratitude, Empathy, and Compassion</strong>Shapes students' hearts through meaningful, hands-on service experiences.</li>
+            <li><strong>Transforms Service into a Lifelong Mindset</strong>Shifts service from an activity students complete into a way of life rooted in purpose, integrity, and lasting commitment to community.</li>
+            <li><strong>Reinforces Westminster's Mission</strong>Develops Christ-centered leaders who reflect God's love and influence the world for Christ.</li>
+          </ul>
+        </div>
+
+        <div class="hhh-card">
+          <h3><i class="fa-solid fa-hands"></i> Hands (Do)</h3>
+          <div class="hhh-subtitle">Takes Action Through Service, Leadership, and Relationships</div>
+          <ul>
+            <li><strong>Encourages Positive Impact</strong>Helps students recognize the difference their actions can make in the lives of others.</li>
+            <li><strong>Provides Mentorship &amp; Leadership Opportunities</strong>Encourages students to grow through collaboration, service, and purposeful leadership.</li>
+            <li><strong>Strengthens Relationships</strong>Builds meaningful connections among students, families, schools, and community partners.</li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </div>
 
   <!-- Program Pillars -->
   <div class="section">
     <h2 class="section-title">Programs</h2>
-
-    <!-- Service Learning -->
-    <div class="category">
-      <div class="cat-header"><span>Service Learning</span></div>
-      <p class="pillar-desc">
-        Students engage in purposeful, structured service projects that connect classroom learning to real community
-        needs. Through reflection and action, students develop empathy, responsibility, and an understanding of how
-        service can transform both the giver and the recipient.
-        <span class="pillar-attrs">Empathy &nbsp;·&nbsp; Responsibility &nbsp;·&nbsp; Stewardship</span>
-      </p>
-      <div class="card-grid">
-        <div class="card accent">
-          <h3>Nature Ambassador</h3>
-          <p>
-            Students explore God's creation, develop an appreciation for the natural world, and inspire others to care
-            for the environment through stewardship and service. Through learning and leadership opportunities, students
-            become advocates for protecting and preserving the world God has entrusted to us.
-          </p>
-          <div class="card-meta">
-            <span class="mk">Session</span><span class="mv">Year-long</span>
-            <span class="mk">Program Time</span><span class="mv">Varies</span>
-            <span class="mk">Grades</span><span class="mv">All grades</span>
-            <span class="mk">Faculty</span><span class="mv"><a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Family Engagement -->
-    <div class="category">
-      <div class="cat-header"><span>Family Engagement</span></div>
-      <p class="pillar-desc">
-        Community Connect invites families into the service journey, creating shared experiences that strengthen
-        bonds between home, school, and the broader community. Families are encouraged to participate alongside
-        students in service opportunities and celebrations of giving.
-        <span class="pillar-attrs">Partnership &nbsp;·&nbsp; Belonging &nbsp;·&nbsp; Shared Purpose</span>
-      </p>
-      <div class="card-grid">
-        <div class="card coming-soon">Programs Coming Soon</div>
-      </div>
-    </div>
-
-    <!-- Mentorship -->
-    <div class="category">
-      <div class="cat-header"><span>Mentorship</span></div>
-      <p class="pillar-desc">
-        Students are both mentored and given opportunities to mentor others, experiencing leadership from the
-        perspective of a servant. These relationships cultivate confidence, character, and a deeper understanding
-        of what it means to lead as Christ leads — by serving first.
-        <span class="pillar-attrs">Servant Leadership &nbsp;·&nbsp; Character &nbsp;·&nbsp; Collaboration</span>
-      </p>
-      <div class="card-grid">
-        <div class="card coming-soon">Programs Coming Soon</div>
-      </div>
-    </div>
-
-    <!-- Global Literacy -->
-    <div class="category">
-      <div class="cat-header"><span>Global Literacy</span></div>
-      <p class="pillar-desc">
-        Through curated learning experiences, students explore the needs of communities near and far. Global literacy
-        helps students understand their role as citizens of the world and as ambassadors of Christ's love equipped
-        to respond with compassion and intentional action.
-        <span class="pillar-attrs">Global Awareness &nbsp;·&nbsp; Citizenship &nbsp;·&nbsp; Compassion</span>
-      </p>
-      <div class="card-grid">
-        <div class="card accent">
-          <h3>Noisy Offering</h3>
-          <p>
-            Students learn the joy of generosity by participating in quarterly Noisy Offerings that support local,
-            national, and global organizations. Throughout the year, students bring coins and bills to "make some noise"
-            while contributing to causes that serve others and meet real needs. Through these giving opportunities,
-            students discover that everyone can make a difference and that even small gifts can have a meaningful impact
-            when combined with the efforts of a caring community.
-          </p>
-          <div class="card-meta">
-            <span class="mk">Session</span><span class="mv">Quarterly</span>
-            <span class="mk">Program Time</span><span class="mv">Chapel</span>
-            <span class="mk">Grades</span><span class="mv">All grades</span>
-            <span class="mk">Faculty</span><span class="mv">Community Connect Team</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Gratitude Practices -->
-    <div class="category">
-      <div class="cat-header"><span>Gratitude Practices</span></div>
-      <p class="pillar-desc">
-        Regular gratitude practices woven into the school year help students cultivate thankful hearts and recognize
-        the blessings around them. These practices shape a posture of generosity, contentment, and joy — foundational
-        to a life of faithful service.
-        <span class="pillar-attrs">Gratitude &nbsp;·&nbsp; Generosity &nbsp;·&nbsp; Joyful Living</span>
-      </p>
-      <div class="card-grid">
-        <div class="card coming-soon">Programs Coming Soon</div>
-      </div>
-    </div>
 
     <!-- Community Partnerships -->
     <div class="category">
@@ -464,7 +404,7 @@
           </div>
         </div>
         <div class="card accent">
-          <h3>KIX Summer Kickoff for Youth for Christ</h3>
+          <h3>Summer Kickoff</h3>
           <p>
             Students participate in a summer service initiative supporting Youth for Christ's KIX Summer programming
             by collecting books and noisy offering to help provide resources for students in need. Through this annual
@@ -475,13 +415,227 @@
           <div class="card-impact">
             <span class="impact-label">Community Impact</span>
             <p>Since 2010, Westminster students and families have consistently shown up to expand summer opportunities
-            for youth in the broader community — proof that small acts of generosity, when united, create lasting change.</p>
+            for youth in the Homestead community proving that small acts of generosity, when united, create lasting change.</p>
           </div>
           <div class="card-meta">
+            <span class="mk">Organization</span><span class="mv"><a href="https://www.miamiyfc.com/citylifekix" target="_blank">Youth for Christ KIX Program</a></span>
             <span class="mk">Session</span><span class="mv">Annual (Summer)</span>
             <span class="mk">Program Time</span><span class="mv">Varies</span>
             <span class="mk">Grades</span><span class="mv">All grades</span>
             <span class="mk">Faculty</span><span class="mv">Chapel Team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Family Engagement -->
+    <div class="category">
+      <div class="cat-header"><span>Family Engagement</span></div>
+      <p class="pillar-desc">
+        Community Connect invites families into the service journey, creating shared experiences that strengthen
+        bonds between home, school, and the broader community. Families are encouraged to participate alongside
+        students in service opportunities and celebrations of giving.
+        <span class="pillar-attrs">Partnership &nbsp;·&nbsp; Belonging &nbsp;·&nbsp; Shared Purpose</span>
+      </p>
+      <div class="card-grid">
+        <div class="card accent">
+          <h3>Family Serve Days</h3>
+          <p>
+            Scheduled throughout the year, Family Serve Days invite families to come together on campus or at
+            community partner sites to serve alongside students and engage in meaningful Community Connect
+            experiences.
+          </p>
+          <div class="card-impact">
+            <span class="impact-label">Examples</span>
+            <ul style="margin: 6px 0 0 18px; line-height: 1.7;">
+              <li>Delivering Noisy Offering donations to partner organizations</li>
+              <li>Volunteering at local food pantries</li>
+            </ul>
+          </div>
+          <div class="card-meta">
+            <span class="mk">Faculty</span><span class="mv"><a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></span>
+          </div>
+        </div>
+        <div class="card accent">
+          <h3>Weekly Chapel Participation</h3>
+          <p>
+            Families are invited to join weekly chapel services, and a variety of events to engage with the
+            spiritual themes and lessons students are learning throughout the year.
+          </p>
+          <div class="card-impact">
+            <span class="impact-label">Examples</span>
+            <ul style="margin: 6px 0 0 18px; line-height: 1.7;">
+              <li>Weekly chapel</li>
+              <li>Family worship nights</li>
+              <li>Bible studies</li>
+            </ul>
+          </div>
+          <div class="card-meta">
+            <span class="mk">Faculty Liaison</span><span class="mv"><a href="mailto:kbrigham@wcsmiami.org">Mrs. Brigham</a> &nbsp;&amp;&nbsp; <a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></span>
+          </div>
+        </div>
+      </div>
+      <p style="margin-top: 18px; font-size: 0.92em; color: #555; line-height: 1.7;">
+        Have an opportunity or want to partner with a Community Connect Initiative?
+        Contact: <a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a>
+      </p>
+    </div>
+
+    <!-- Global Literacy -->
+    <div class="category">
+      <div class="cat-header"><span>Global Literacy</span></div>
+      <p class="pillar-desc">
+        Through curated learning experiences, students explore the needs of communities near and far. Global literacy
+        helps students understand their role as citizens of the world and as ambassadors of Christ's love equipped
+        to respond with compassion and intentional action.
+        <span class="pillar-attrs">Global Awareness &nbsp;·&nbsp; Citizenship &nbsp;·&nbsp; Compassion</span>
+      </p>
+      <div class="card-grid">
+        <div class="card accent">
+          <h3>International Festival Day</h3>
+          <p>
+            Students explore global cultures, traditions, and communities through an interactive, school-wide
+            experience that brings learning to life. Through food, music, language, storytelling, and cultural
+            displays, students gain a deeper understanding of the diverse world God has created and their role as
+            global citizens. Families are invited to participate alongside students, strengthening connections
+            between home, school, and the wider world while celebrating shared humanity and Christ-centered
+            compassion.
+          </p>
+          <div class="card-meta">
+            <span class="mk">Session</span><span class="mv">Annual</span>
+            <span class="mk">Program Time</span><span class="mv">Fall</span>
+            <span class="mk">Grades</span><span class="mv">All grades</span>
+            <span class="mk">Faculty</span><span class="mv">Sra. Hughes &amp; Sra. Childers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gratitude Practices -->
+    <div class="category">
+      <div class="cat-header"><span>Gratitude Practices</span></div>
+      <p class="pillar-desc">
+        Regular gratitude practices woven into the school year help students cultivate thankful hearts and recognize
+        the blessings around them. These practices shape a posture of generosity, contentment, and joy foundational
+        to a life of faithful service.
+        <span class="pillar-attrs">Gratitude &nbsp;·&nbsp; Generosity &nbsp;·&nbsp; Joyful Living</span>
+      </p>
+      <div class="card-grid">
+        <div class="card accent">
+          <h3>Noisy Offering</h3>
+          <p>
+            Students learn the joy of generosity by participating in quarterly Noisy Offerings that support local,
+            national, and global organizations. Throughout the year, students bring coins and bills to "make some noise"
+            while contributing to causes that serve others and meet real needs. Through these giving opportunities,
+            students discover that everyone can make a difference and that even small gifts can have a meaningful impact
+            when combined with the efforts of a caring community.
+          </p>
+          <div class="card-meta">
+            <span class="mk">Session</span><span class="mv">Quarterly</span>
+            <span class="mk">Program Time</span><span class="mv">Chapel</span>
+            <span class="mk">Grades</span><span class="mv">All grades</span>
+            <span class="mk">Faculty</span><span class="mv">Community Connect Team</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mentorship -->
+    <div class="category">
+      <div class="cat-header"><span>Mentorship</span></div>
+      <p class="pillar-desc">
+        Students are both mentored and given opportunities to mentor others, experiencing leadership from the
+        perspective of a servant. These relationships cultivate confidence, character, and a deeper understanding
+        of what it means to lead as Christ leadsby serving first.
+        <span class="pillar-attrs">Servant Leadership &nbsp;·&nbsp; Character &nbsp;·&nbsp; Collaboration</span>
+      </p>
+      <div class="card-grid">
+        <div class="card accent">
+          <h3>Safety Patrol</h3>
+          <p>
+            Selected 5th grade students serve the Elementary Campus during morning drop-off, helping create a safe
+            and welcoming environment for students and families. Through this leadership opportunity, students
+            develop responsibility, dependability, and servant leadership skills.
+          </p>
+          <div class="card-meta">
+            <span class="mk">Session</span><span class="mv">Year-long</span>
+            <span class="mk">Program Time</span><span class="mv">Before School</span>
+            <span class="mk">Grades</span><span class="mv">5th</span>
+            <span class="mk">Faculty</span><span class="mv">Coach Moon</span>
+          </div>
+        </div>
+        <div class="card accent">
+          <h3>Sunshine Squad</h3>
+          <p>
+            Fourth-grade students develop leadership through service and mentorship by supporting younger PK students
+            during Morning Care, offering encouragement, building friendships, and helping create a warm and welcoming
+            environment. Through this experience, students grow in responsibility, empathy, communication, teamwork,
+            and servant leadership as they learn to lead with kindness and care for others.
+          </p>
+          <div class="card-meta">
+            <span class="mk">Session</span><span class="mv">Year-long</span>
+            <span class="mk">Program Time</span><span class="mv">Before School</span>
+            <span class="mk">Grades</span><span class="mv">4th</span>
+            <span class="mk">Faculty</span><span class="mv"><a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></span>
+          </div>
+        </div>
+        <div class="card accent">
+          <h3>Reading Buddies</h3>
+          <p>
+            Fourth and fifth grade students develop leadership through service and mentorship by supporting younger
+            first and second grade students during dismissal, offering encouragement, building friendships, and
+            helping create a warm and welcoming environment for reading. Through this experience, students grow in
+            responsibility, empathy, communication, teamwork, and servant leadership as they learn to lead with
+            kindness and care for others.
+          </p>
+          <div class="card-meta">
+            <span class="mk">Session</span><span class="mv">Year-long</span>
+            <span class="mk">Program Time</span><span class="mv">Dismissal</span>
+            <span class="mk">Grades</span><span class="mv">4th &amp; 5th</span>
+            <span class="mk">Faculty</span><span class="mv"><a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></span>
+          </div>
+        </div>
+        <div class="card accent">
+          <h3>Mini Mathletes</h3>
+          <p>
+            Fourth grade students develop leadership through service and mentorship by supporting younger first and
+            second grade students during dismissal, offering encouragement, building friendships, and helping create
+            a warm and welcoming environment for math enrichment. Through this experience, students grow in
+            responsibility, empathy, communication, teamwork, and servant leadership as they learn to lead with
+            kindness and care for others.
+          </p>
+          <div class="card-meta">
+            <span class="mk">Session</span><span class="mv">Year-long</span>
+            <span class="mk">Program Time</span><span class="mv">Dismissal</span>
+            <span class="mk">Grades</span><span class="mv">4th</span>
+            <span class="mk">Faculty</span><span class="mv">Mrs. Simril</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Learning -->
+    <div class="category">
+      <div class="cat-header"><span>Service Learning</span></div>
+      <p class="pillar-desc">
+        Students engage in purposeful, structured service projects that connect classroom learning to real community
+        needs. Through reflection and action, students develop empathy, responsibility, and an understanding of how
+        service can transform both the giver and the recipient.
+        <span class="pillar-attrs">Empathy &nbsp;·&nbsp; Responsibility &nbsp;·&nbsp; Stewardship</span>
+      </p>
+      <div class="card-grid">
+        <div class="card accent">
+          <h3>Nature Ambassador</h3>
+          <p>
+            Students explore God's creation, develop an appreciation for the natural world, and inspire others to care
+            for the environment through stewardship and service. Through learning and leadership opportunities, students
+            become advocates for protecting and preserving the world God has entrusted to us.
+          </p>
+          <div class="card-meta">
+            <span class="mk">Session</span><span class="mv">Year-long</span>
+            <span class="mk">Program Time</span><span class="mv">Varies</span>
+            <span class="mk">Grades</span><span class="mv">All grades</span>
+            <span class="mk">Faculty</span><span class="mv"><a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></span>
           </div>
         </div>
       </div>
@@ -503,6 +657,23 @@
           <div class="name">Mrs. Glavach</div>
           <div class="role">Community Connect Initiative Lead</div>
           <a class="email-btn" href="mailto:mglavach@wcsmiami.org">Email</a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="initials">KB</span>
+          </div>
+          <div class="name">Mrs. Brigham</div>
+          <div class="role">PS/ES School Counselor</div>
+          <a class="email-btn" href="mailto:kbrigham@wcsmiami.org">Email</a>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="initials">MS</span>
+          </div>
+          <div class="name">Mrs. Simril</div>
+          <div class="role">Faculty</div>
         </div>
 
       </div>
