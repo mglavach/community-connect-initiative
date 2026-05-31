@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:\\\\Users\\\\mglavach\\\\OneDrive - Westminster Christian School\\\\Community Connect Initiative\\\\\")",
+      "Read(//c/Users/mglavach/OneDrive - Westminster Christian School/**)",
+      "Bash(git init *)"
+    ]
+  }
+}
