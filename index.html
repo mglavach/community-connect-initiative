@@ -4,16 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Community Connect Initiative</title>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    :root {
+      --forest:      #2c5234;
+      --gold:        #B9975B;
+      --cream:       #fdf8ef;
+      --sage:        #4a7c59;
+      --sky:         #4a90c4;
+      --light-gold:  #f5ead8;
+      --light-blue:  #e8f2f9;
+      --light-green: #eaf3ec;
+      --text:        #2c2c2c;
+      --muted:       #6b6b6b;
+    }
+
     body {
-      font-family: 'Open Sans', Arial, sans-serif;
+      font-family: 'Montserrat', Arial, sans-serif;
       font-size: 11pt;
-      background: #f9f7f4;
-      color: #222;
+      background: var(--cream);
+      color: var(--text);
     }
 
     /* ── Section wrapper ── */
@@ -23,27 +36,27 @@
       margin: 0 auto;
     }
     .section-title {
-      color: #2C5234;
-      font-weight: normal;
-      letter-spacing: 0.04em;
-      border-left: 4px solid #B9975B;
-      padding-left: 12px;
+      color: var(--forest);
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-left: 5px solid var(--gold);
+      padding-left: 14px;
       margin-bottom: 32px;
     }
 
     /* ── Why list ── */
     .why-list {
-      background: #fff;
+      background: var(--light-green);
       padding: 40px 24px;
     }
     .why-list .section { padding-top: 0; padding-bottom: 0; }
     .section-subtitle {
-      color: #888;
+      color: var(--muted);
       font-style: italic;
       font-size: 0.95em;
-      margin-top: -20px;
-      margin-bottom: 28px;
-      padding-left: 16px;
+      margin-bottom: 0;
+      padding-left: 0;
     }
     .hhh-grid {
       display: grid;
@@ -55,26 +68,28 @@
       .hhh-grid { grid-template-columns: 1fr; }
     }
     .hhh-card {
-      border-top: 4px solid #B9975B;
+      border-top: 4px solid var(--gold);
       padding: 20px 18px 24px;
-      background: #f9f7f4;
+      background: #fff;
       border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(44,82,52,0.07);
     }
     .hhh-card h3 {
-      color: #2C5234;
+      color: var(--forest);
       font-size: 1.05em;
+      font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
       margin-bottom: 4px;
     }
     .hhh-card h3 i {
-      color: #B9975B;
+      color: var(--gold);
       font-size: 0.95em;
       margin-right: 2px;
     }
     .hhh-card .hhh-subtitle {
       font-size: 0.85em;
-      color: #888;
+      color: var(--muted);
       margin-bottom: 16px;
       font-style: italic;
     }
@@ -94,14 +109,14 @@
       content: "›";
       position: absolute;
       left: 0;
-      color: #B9975B;
+      color: var(--gold);
       font-weight: bold;
     }
 
     /* ── Pillar description ── */
     .pillar-desc {
       margin-bottom: 22px;
-      color: #555;
+      color: var(--muted);
       line-height: 1.7;
     }
     .pillar-desc .pillar-attrs {
@@ -109,14 +124,14 @@
       margin-top: 8px;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: #B9975B;
+      color: var(--gold);
       font-weight: 600;
     }
 
     /* ── Community impact callout ── */
     .card-impact {
-      background: #edf4ee;
-      border-left: 4px solid #2C5234;
+      background: var(--light-green);
+      border-left: 4px solid var(--forest);
       border-radius: 3px;
       padding: 12px 14px;
       margin-bottom: 16px;
@@ -126,13 +141,13 @@
       font-size: 0.7em;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #2C5234;
-      font-weight: bold;
+      color: var(--forest);
+      font-weight: 700;
       margin-bottom: 6px;
     }
     .card-impact p {
       font-size: 0.88em;
-      color: #3a5c3e;
+      color: var(--text);
       line-height: 1.6;
       margin-bottom: 0;
     }
@@ -164,15 +179,16 @@
     .cat-header span {
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #B9975B;
+      color: var(--forest);
       white-space: nowrap;
-      font-weight: bold;
+      font-weight: 700;
+      font-size: 0.85em;
     }
     .cat-header::after {
       content: '';
       flex: 1;
-      height: 1px;
-      background: #ddd;
+      height: 2px;
+      background: var(--light-gold);
     }
 
     /* ── Card grid ── */
@@ -185,22 +201,23 @@
     .card {
       background: #fff;
       border-radius: 6px;
-      border-top: 5px solid #2C5234;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-top: 5px solid var(--forest);
+      box-shadow: 0 2px 10px rgba(44,82,52,0.09);
       padding: 26px 22px;
       display: flex;
       flex-direction: column;
     }
-    .card.accent { border-top-color: #B9975B; }
+    .card.accent { border-top-color: var(--gold); }
 
     .card h3 {
-      color: #2C5234;
+      color: var(--forest);
+      font-weight: 700;
       margin-bottom: 10px;
       line-height: 1.3;
     }
     .card p {
       line-height: 1.7;
-      color: #444;
+      color: var(--muted);
       flex: 1;
       margin-bottom: 16px;
     }
@@ -208,9 +225,9 @@
       display: inline-block;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      background: #f0ede8;
-      color: #B9975B;
-      border: 1px solid #B9975B;
+      background: var(--light-gold);
+      color: var(--gold);
+      border: 1px solid var(--gold);
       border-radius: 3px;
       padding: 3px 9px;
       margin-bottom: 14px;
@@ -226,19 +243,20 @@
       gap: 6px 12px;
     }
     .card-meta .mk {
-      color: #B9975B;
-      font-weight: bold;
+      color: var(--gold);
+      font-weight: 700;
       white-space: nowrap;
       text-transform: uppercase;
       letter-spacing: 0.08em;
       padding-top: 1px;
+      font-size: 0.78em;
     }
     .card-meta .mv {
-      color: #444;
+      color: var(--text);
       line-height: 1.4;
     }
     .card-meta .mv a {
-      color: #2C5234;
+      color: var(--forest);
       text-decoration: none;
       font-weight: 600;
     }
@@ -246,7 +264,7 @@
 
     /* ── Team section ── */
     .team-bg {
-      background: #fff;
+      background: var(--light-green);
     }
     .team-grid {
       display: grid;
@@ -260,18 +278,18 @@
       width: 110px;
       height: 110px;
       border-radius: 50%;
-      background: #2C5234;
+      background: var(--forest);
       display: flex;
       align-items: center;
       justify-content: center;
       margin: 0 auto 14px;
       overflow: hidden;
-      border: 3px solid #B9975B;
+      border: 3px solid var(--gold);
       position: relative;
     }
     .team-avatar .initials {
-      color: #B9975B;
-      font-weight: bold;
+      color: var(--gold);
+      font-weight: 700;
       letter-spacing: 0.04em;
       position: absolute;
     }
@@ -283,87 +301,471 @@
       object-fit: cover;
     }
     .team-card .name {
-      color: #2C5234;
-      font-weight: bold;
+      color: var(--forest);
+      font-weight: 700;
       margin-bottom: 4px;
     }
+    .team-card .name a {
+      color: var(--forest);
+      text-decoration: none;
+    }
+    .team-card .name a:hover { text-decoration: underline; }
+    .team-programs {
+      font-size: 0.78em;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
     .team-card .role {
-      color: #888;
+      color: var(--muted);
       line-height: 1.4;
       margin-bottom: 10px;
+      font-size: 0.9em;
     }
     .team-card a.email-btn {
       display: inline-block;
       letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: #2C5234;
-      border: 1px solid #2C5234;
+      font-size: 0.78em;
+      font-weight: 600;
+      color: var(--forest);
+      border: 1.5px solid var(--forest);
       border-radius: 3px;
-      padding: 4px 12px;
+      padding: 4px 14px;
       text-decoration: none;
       transition: background 0.15s, color 0.15s;
     }
     .team-card a.email-btn:hover {
-      background: #2C5234;
+      background: var(--forest);
       color: #fff;
     }
 
     /* ── Contact footer ── */
     .contact {
-      background: #2C5234;
+      background: var(--forest);
       color: #fff;
       text-align: center;
       padding: 32px 24px;
     }
     .contact p { line-height: 1.75; }
     .contact a {
-      color: #B9975B;
+      color: var(--gold);
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 700;
     }
     .contact a:hover { text-decoration: underline; }
+    /* ── Site header ── */
+    .site-header {
+      background: var(--forest);
+      padding: 36px 32px 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+    }
+    .site-header img {
+      height: 90px;
+      width: auto;
+    }
+    .site-header h1 {
+      color: #fff;
+      font-size: 1.7em;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+    @media (max-width: 600px) {
+      .site-header { padding: 28px 20px 24px; }
+      .site-header img { height: 70px; }
+      .site-header h1 { font-size: 1.1em; }
+    }
+
+    /* ── Why section two-column top ── */
+    .why-top {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 36px;
+      align-items: start;
+      margin-bottom: 36px;
+    }
+    @media (max-width: 760px) {
+      .why-top { grid-template-columns: 1fr; }
+    }
+
+    .verse-block {
+      background: var(--cream);
+      border-left: 5px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 24px 28px 20px;
+    }
+    .verse-block blockquote {
+      font-size: 1em;
+      font-style: italic;
+      color: var(--forest);
+      line-height: 1.8;
+      margin: 0 0 12px;
+    }
+    .verse-block cite {
+      display: block;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 0.78em;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .foundation-lead {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 1em;
+      margin-bottom: 20px;
+    }
+
+    /* ── Pathway tabs ── */
+    .pathway-section {
+      background: #fff;
+      padding: 48px 24px;
+    }
+    .pathway-section .section { padding-top: 0; padding-bottom: 0; }
+
+    .pathway-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      border-bottom: 2px solid #ddd;
+      margin-bottom: 2rem;
+    }
+    .pathway-tab {
+      padding: 0.65rem 1.8rem;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      cursor: pointer;
+      transition: color 0.15s, border-color 0.15s;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .pathway-tab i { font-size: 0.95em; }
+    .pathway-tab:hover { color: var(--forest); }
+    .pathway-tab.active {
+      color: var(--forest);
+      border-bottom-color: var(--gold);
+    }
+    .pathway-panel { display: none; }
+    .pathway-panel.active { display: block; }
+
+    .pathway-pillar-header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--light-gold);
+    }
+    .pathway-pillar-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--forest);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .pathway-pillar-icon i { color: var(--gold); font-size: 1.3em; }
+    .pathway-pillar-name {
+      font-size: 1.25em;
+      font-weight: 700;
+      color: var(--forest);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    .pathway-pillar-sub {
+      font-size: 0.88em;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 2px;
+    }
+
+    .pathway-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+    }
+    .pathway-item {
+      background: var(--cream);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+      padding: 16px 18px;
+    }
+    .pathway-item-title {
+      font-weight: 700;
+      color: var(--forest);
+      font-size: 0.92em;
+      margin-bottom: 6px;
+    }
+    .pathway-item-desc {
+      font-size: 0.88em;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* ── Card pillar icons ── */
+    .card-pillars {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 12px;
+    }
+    .card-pillar {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.7em;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--forest);
+      background: var(--light-green);
+      border: 1px solid rgba(44,82,52,0.18);
+      border-radius: 20px;
+      padding: 2px 9px 2px 7px;
+    }
+    .card-pillar i { color: var(--gold); font-size: 0.95em; }
+
+    /* ── HHH visual framework ── */
+    .hhh-visual {
+      margin-top: 24px;
+      background: var(--cream);
+      border: 1px solid var(--light-gold);
+      border-radius: 8px;
+      padding: 20px 18px 18px;
+    }
+    .hhh-visual-title {
+      text-align: center;
+      font-size: 0.7em;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .hhh-visual-pillars {
+      display: flex;
+      align-items: stretch;
+      gap: 0;
+    }
+    .hhh-visual-pillar {
+      flex: 1;
+      text-align: center;
+      padding: 0 12px;
+      position: relative;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background 0.15s;
+    }
+    .hhh-visual-pillar:hover { background: var(--light-green); }
+    .hhh-visual-pillar + .hhh-visual-pillar::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10%;
+      height: 80%;
+      width: 1px;
+      background: var(--light-gold);
+    }
+    .hhh-visual-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--forest);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      box-shadow: 0 2px 8px rgba(44,82,52,0.18);
+    }
+    .hhh-visual-icon i { color: var(--gold); font-size: 1.25em; }
+    .hhh-visual-name {
+      font-weight: 700;
+      font-size: 1em;
+      color: var(--forest);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .hhh-visual-verb {
+      font-size: 0.82em;
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 600;
+      margin: 2px 0 6px;
+    }
+    .hhh-visual-desc {
+      font-size: 0.72em;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
 
+  <header class="site-header">
+    <img src="WCS academic logo.png" alt="Westminster Christian School academic logo" />
+    <h1>WCS Community Connect: Elementary Pathway</h1>
+  </header>
+
   <!-- Why -->
   <div class="why-list">
     <div class="section">
-      <h2 class="section-title">Why Community Connect?</h2>
-      <p class="section-subtitle">Head &bull; Heart &bull; Hands Learning Foundation</p>
-      <div class="hhh-grid">
+      <h2 class="section-title">Why a Community Connect Pathway on the Elementary Level?</h2>
 
-        <div class="hhh-card">
-          <h3><i class="fa-solid fa-lightbulb"></i> Head (Think)</h3>
-          <div class="hhh-subtitle">Understands Purpose, Learning, and Global Awareness</div>
-          <ul>
-            <li><strong>Connects Learning to Life</strong>Links  experiences to real-world service and stewardship.</li>
-            <li><strong>Develops Global Awareness</strong>Fosters responsible citizenship and understanding of needs locally and globally.</li>
-            <li><strong>Helps Students Discover Their Gifts</strong>Empowers students to identify and use their God-given talents in service to others.</li>
-          </ul>
+      <div class="why-top">
+        <div>
+          <p class="foundation-lead">
+            At Westminster Christian School, we believe that serving others is not something students grow into; it is
+            something they are called to from the very beginning. Community Connect exists because the foundation of a
+            life of faithful service starts early, when hearts are tender, habits are forming, and the seeds of
+            compassion, generosity, and purpose take deepest root.
+          </p>
+          <div class="hhh-visual">
+            <div class="hhh-visual-pillars">
+              <div class="hhh-visual-pillar" onclick="goToPathway('pathway-head')" title="Go to Head pathway">
+                <div class="hhh-visual-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                <div class="hhh-visual-name">Head</div>
+                <div class="hhh-visual-verb">Think</div>
+                <div class="hhh-visual-desc">Purpose &bull; Learning &bull; Awareness</div>
+              </div>
+              <div class="hhh-visual-pillar" onclick="goToPathway('pathway-heart')" title="Go to Heart pathway">
+                <div class="hhh-visual-icon"><i class="fa-solid fa-heart"></i></div>
+                <div class="hhh-visual-name">Heart</div>
+                <div class="hhh-visual-verb">Be</div>
+                <div class="hhh-visual-desc">Character &bull; Values &bull; Mindset</div>
+              </div>
+              <div class="hhh-visual-pillar" onclick="goToPathway('pathway-hands')" title="Go to Hands pathway">
+                <div class="hhh-visual-icon"><i class="fa-solid fa-hands"></i></div>
+                <div class="hhh-visual-name">Hands</div>
+                <div class="hhh-visual-verb">Do</div>
+                <div class="hhh-visual-desc">Service &bull; Leadership &bull; Action</div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <div class="hhh-card">
-          <h3><i class="fa-solid fa-heart"></i> Heart (Be)</h3>
-          <div class="hhh-subtitle">Forms Character, Values, and Lifelong Mindset</div>
-          <ul>
-            <li><strong>Cultivates Gratitude, Empathy, and Compassion</strong>Shapes students' hearts through meaningful, hands-on service experiences.</li>
-            <li><strong>Transforms Service into a Lifelong Mindset</strong>Shifts service from an activity students complete into a way of life rooted in purpose, integrity, and lasting commitment to community.</li>
-            <li><strong>Reinforces Westminster's Mission</strong>Develops Christ-centered leaders who reflect God's love and influence the world for Christ.</li>
-          </ul>
+        <div class="verse-block">
+          <blockquote>
+            "The most important one," answered Jesus, "is this: 'Hear, O Israel: The Lord our God, the Lord is one.
+            Love the Lord your God with all your heart and with all your soul and with all your mind and with all your
+            strength.' The second is this: 'Love your neighbor as yourself.' There is no commandment greater than these."
+          </blockquote>
+          <cite>Mark 12:29-31</cite>
         </div>
-
-        <div class="hhh-card">
-          <h3><i class="fa-solid fa-hands"></i> Hands (Do)</h3>
-          <div class="hhh-subtitle">Takes Action Through Service, Leadership, and Relationships</div>
-          <ul>
-            <li><strong>Encourages Positive Impact</strong>Helps students recognize the difference their actions can make in the lives of others.</li>
-            <li><strong>Provides Mentorship &amp; Leadership Opportunities</strong>Encourages students to grow through collaboration, service, and purposeful leadership.</li>
-            <li><strong>Strengthens Relationships</strong>Builds meaningful connections among students, families, schools, and community partners.</li>
-          </ul>
-        </div>
-
       </div>
+
+    </div>
+  </div>
+
+  <!-- Pathway Framework -->
+  <div class="pathway-section">
+    <div class="section">
+      <h2 class="section-title">The Community Connect Pathway</h2>
+
+      <div class="pathway-tabs">
+        <button class="pathway-tab active" onclick="showPathwayTab(event,'pathway-head')">
+          <i class="fa-solid fa-lightbulb"></i> Head (Think)
+        </button>
+        <button class="pathway-tab" onclick="showPathwayTab(event,'pathway-heart')">
+          <i class="fa-solid fa-heart"></i> Heart (Be)
+        </button>
+        <button class="pathway-tab" onclick="showPathwayTab(event,'pathway-hands')">
+          <i class="fa-solid fa-hands"></i> Hands (Do)
+        </button>
+      </div>
+
+      <div id="pathway-head" class="pathway-panel active">
+        <div class="pathway-pillar-header">
+          <div class="pathway-pillar-icon"><i class="fa-solid fa-lightbulb"></i></div>
+          <div>
+            <div class="pathway-pillar-name">Head</div>
+            <div class="pathway-pillar-sub">Understands Purpose, Learning, and Global Awareness</div>
+          </div>
+        </div>
+        <div class="pathway-items">
+          <div class="pathway-item">
+            <div class="pathway-item-title">Connects Learning to Life</div>
+            <div class="pathway-item-desc">Links experiences to real-world service and stewardship, helping students see how what they learn shapes how they serve.</div>
+          </div>
+          <div class="pathway-item">
+            <div class="pathway-item-title">Develops Global Awareness</div>
+            <div class="pathway-item-desc">Fosters responsible citizenship and understanding of needs locally and globally, broadening students' view of the world God loves.</div>
+          </div>
+          <div class="pathway-item">
+            <div class="pathway-item-title">Helps Students Discover Their Gifts</div>
+            <div class="pathway-item-desc">Empowers students to identify and use their God-given talents in service to others, building confidence and calling from an early age.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pathway-heart" class="pathway-panel">
+        <div class="pathway-pillar-header">
+          <div class="pathway-pillar-icon"><i class="fa-solid fa-heart"></i></div>
+          <div>
+            <div class="pathway-pillar-name">Heart</div>
+            <div class="pathway-pillar-sub">Forms Character, Values, and Lifelong Mindset</div>
+          </div>
+        </div>
+        <div class="pathway-items">
+          <div class="pathway-item">
+            <div class="pathway-item-title">Cultivates Gratitude, Empathy, and Compassion</div>
+            <div class="pathway-item-desc">Shapes students' hearts through meaningful, hands-on service experiences that move them from awareness to genuine care for others.</div>
+          </div>
+          <div class="pathway-item">
+            <div class="pathway-item-title">Transforms Service into a Lifelong Mindset</div>
+            <div class="pathway-item-desc">Shifts service from an activity students complete into a way of life rooted in purpose, integrity, and lasting commitment to community.</div>
+          </div>
+          <div class="pathway-item">
+            <div class="pathway-item-title">Reinforces Westminster's Mission</div>
+            <div class="pathway-item-desc">Develops Christ-centered leaders who reflect God's love and influence the world for Christ, grounding service in faith and character.</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="pathway-hands" class="pathway-panel">
+        <div class="pathway-pillar-header">
+          <div class="pathway-pillar-icon"><i class="fa-solid fa-hands"></i></div>
+          <div>
+            <div class="pathway-pillar-name">Hands</div>
+            <div class="pathway-pillar-sub">Takes Action Through Service, Leadership, and Relationships</div>
+          </div>
+        </div>
+        <div class="pathway-items">
+          <div class="pathway-item">
+            <div class="pathway-item-title">Encourages Positive Impact</div>
+            <div class="pathway-item-desc">Helps students recognize the difference their actions can make in the lives of others, turning good intentions into tangible community good.</div>
+          </div>
+          <div class="pathway-item">
+            <div class="pathway-item-title">Provides Mentorship &amp; Leadership Opportunities</div>
+            <div class="pathway-item-desc">Encourages students to grow through collaboration, service, and purposeful leadership, learning to lead as Christ leads: by serving first.</div>
+          </div>
+          <div class="pathway-item">
+            <div class="pathway-item-title">Strengthens Relationships</div>
+            <div class="pathway-item-desc">Builds meaningful connections among students, families, schools, and community partners, reflecting God's call to love our neighbors.</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -383,6 +785,10 @@
       <div class="card-grid">
         <div class="card accent">
           <h3>Thanksgiving Food Drive</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Students and families come together each year to provide Thanksgiving meals for families in need through
             the Angel Share Food Drive. In partnership with Laura Saunders K-8 Center in Florida City, Westminster
@@ -400,11 +806,15 @@
             <span class="mk">Session</span><span class="mv">Annual (Fall)</span>
             <span class="mk">Program Time</span><span class="mv">November</span>
             <span class="mk">Grades</span><span class="mv">All grades</span>
-            <span class="mk">Faculty</span><span class="mv"><a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></span>
+            <span class="mk">Faculty</span><span class="mv">Chapel Team</span>
           </div>
         </div>
         <div class="card accent">
           <h3>Summer Kickoff</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Students participate in a summer service initiative supporting Youth for Christ's KIX Summer programming
             by collecting books and noisy offering to help provide resources for students in need. Through this annual
@@ -440,6 +850,10 @@
       <div class="card-grid">
         <div class="card accent">
           <h3>Family Serve Days</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Scheduled throughout the year, Family Serve Days invite families to come together on campus or at
             community partner sites to serve alongside students and engage in meaningful Community Connect
@@ -457,7 +871,11 @@
           </div>
         </div>
         <div class="card accent">
-          <h3>Weekly Chapel Participation</h3>
+          <h3>Warrior Worship</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-lightbulb"></i> Head</span>
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+          </div>
           <p>
             Families are invited to join weekly chapel services, and a variety of events to engage with the
             spiritual themes and lessons students are learning throughout the year.
@@ -467,7 +885,7 @@
             <ul style="margin: 6px 0 0 18px; line-height: 1.7;">
               <li>Weekly chapel</li>
               <li>Family worship nights</li>
-              <li>Bible studies</li>
+              <li>Parent Partner Bible Study</li>
             </ul>
           </div>
           <div class="card-meta">
@@ -475,10 +893,7 @@
           </div>
         </div>
       </div>
-      <p style="margin-top: 18px; font-size: 0.92em; color: #555; line-height: 1.7;">
-        Have an opportunity or want to partner with a Community Connect Initiative?
-        Contact: <a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a>
-      </p>
+
     </div>
 
     <!-- Global Literacy -->
@@ -493,6 +908,10 @@
       <div class="card-grid">
         <div class="card accent">
           <h3>International Festival Day</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-lightbulb"></i> Head</span>
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+          </div>
           <p>
             Students explore global cultures, traditions, and communities through an interactive, school-wide
             experience that brings learning to life. Through food, music, language, storytelling, and cultural
@@ -523,6 +942,10 @@
       <div class="card-grid">
         <div class="card accent">
           <h3>Noisy Offering</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Students learn the joy of generosity by participating in quarterly Noisy Offerings that support local,
             national, and global organizations. Throughout the year, students bring coins and bills to "make some noise"
@@ -534,7 +957,7 @@
             <span class="mk">Session</span><span class="mv">Quarterly</span>
             <span class="mk">Program Time</span><span class="mv">Chapel</span>
             <span class="mk">Grades</span><span class="mv">All grades</span>
-            <span class="mk">Faculty</span><span class="mv">Community Connect Team</span>
+            <span class="mk">Faculty</span><span class="mv"><a href="mailto:kbrigham@wcsmiami.org">Mrs. Brigham</a> &amp; Chapel Team</span>
           </div>
         </div>
       </div>
@@ -552,6 +975,10 @@
       <div class="card-grid">
         <div class="card accent">
           <h3>Safety Patrol</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Selected 5th grade students serve the Elementary Campus during morning drop-off, helping create a safe
             and welcoming environment for students and families. Through this leadership opportunity, students
@@ -566,6 +993,10 @@
         </div>
         <div class="card accent">
           <h3>Sunshine Squad</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-heart"></i> Heart</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Fourth-grade students develop leadership through service and mentorship by supporting younger PK students
             during Morning Care, offering encouragement, building friendships, and helping create a warm and welcoming
@@ -581,6 +1012,10 @@
         </div>
         <div class="card accent">
           <h3>Reading Buddies</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-lightbulb"></i> Head</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Fourth and fifth grade students develop leadership through service and mentorship by supporting younger
             first and second grade students during dismissal, offering encouragement, building friendships, and
@@ -597,6 +1032,10 @@
         </div>
         <div class="card accent">
           <h3>Mini Mathletes</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-lightbulb"></i> Head</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Fourth grade students develop leadership through service and mentorship by supporting younger first and
             second grade students during dismissal, offering encouragement, building friendships, and helping create
@@ -626,6 +1065,10 @@
       <div class="card-grid">
         <div class="card accent">
           <h3>Nature Ambassador</h3>
+          <div class="card-pillars">
+            <span class="card-pillar"><i class="fa-solid fa-lightbulb"></i> Head</span>
+            <span class="card-pillar"><i class="fa-solid fa-hands"></i> Hands</span>
+          </div>
           <p>
             Students explore God's creation, develop an appreciation for the natural world, and inspire others to care
             for the environment through stewardship and service. Through learning and leadership opportunities, students
@@ -649,31 +1092,75 @@
       <h2 class="section-title">The Team</h2>
       <div class="team-grid">
 
+        <!-- Brigham -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="initials">KB</span>
+            <img src="https://bbk12e1-cdn.myschoolcdn.com/ftpimages/701/user/large_user_3425147_653.jpg?resize=200,200" alt="Mrs. Brigham" />
+          </div>
+          <div class="name"><a href="mailto:kbrigham@wcsmiami.org">Mrs. Brigham</a></div>
+          <div class="role">PS/ES School Counselor</div>
+          <div class="team-programs">Warrior Worship</div>
+          <a class="email-btn" href="mailto:kbrigham@wcsmiami.org">Email</a>
+        </div>
+
+        <!-- Childers -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="initials">SC</span>
+            <img src="https://bbk12e1-cdn.myschoolcdn.com/ftpimages/701/user/large_user_6643472_975.jpg?resize=200,200" alt="Sra. Childers" />
+          </div>
+          <div class="name"><a href="mailto:jchilders@wcsmiami.org">Sra. Childers</a></div>
+          <div class="role">Faculty</div>
+          <div class="team-programs">International Festival Day</div>
+          <a class="email-btn" href="mailto:jchilders@wcsmiami.org">Email</a>
+        </div>
+
+        <!-- Glavach -->
         <div class="team-card">
           <div class="team-avatar">
             <span class="initials">MG</span>
             <img src="https://bbk12e1-cdn.myschoolcdn.com/ftpimages/701/user/large_user_3553023_661.jpg?resize=200,200" alt="Mrs. Glavach" />
           </div>
-          <div class="name">Mrs. Glavach</div>
+          <div class="name"><a href="mailto:mglavach@wcsmiami.org">Mrs. Glavach</a></div>
           <div class="role">Community Connect Initiative Lead</div>
           <a class="email-btn" href="mailto:mglavach@wcsmiami.org">Email</a>
         </div>
 
+        <!-- Hughes -->
         <div class="team-card">
           <div class="team-avatar">
-            <span class="initials">KB</span>
+            <span class="initials">SH</span>
+            <img src="https://bbk12e1-cdn.myschoolcdn.com/ftpimages/701/user/large_user_3425087_671.jpg?resize=200,200" alt="Sra. Hughes" />
           </div>
-          <div class="name">Mrs. Brigham</div>
-          <div class="role">PS/ES School Counselor</div>
-          <a class="email-btn" href="mailto:kbrigham@wcsmiami.org">Email</a>
+          <div class="name"><a href="mailto:mhughes@wcsmiami.org">Sra. Hughes</a></div>
+          <div class="role">Faculty</div>
+          <div class="team-programs">International Festival Day</div>
+          <a class="email-btn" href="mailto:mhughes@wcsmiami.org">Email</a>
         </div>
 
+        <!-- Moon -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="initials">CM</span>
+            <img src="https://bbk12e1-cdn.myschoolcdn.com/ftpimages/701/user/large_user_3434226_845.jpg?resize=200,200" alt="Coach Moon" />
+          </div>
+          <div class="name"><a href="mailto:kmoon@wcsmiami.org">Coach Moon</a></div>
+          <div class="role">Faculty</div>
+          <div class="team-programs">Safety Patrol</div>
+          <a class="email-btn" href="mailto:kmoon@wcsmiami.org">Email</a>
+        </div>
+
+        <!-- Simril -->
         <div class="team-card">
           <div class="team-avatar">
             <span class="initials">MS</span>
+            <img src="https://bbk12e1-cdn.myschoolcdn.com/ftpimages/701/user/large_user_5840709_231.jpg?resize=200,200" alt="Mrs. Simril" />
           </div>
-          <div class="name">Mrs. Simril</div>
+          <div class="name"><a href="mailto:msimril@wcsmiami.org">Mrs. Simril</a></div>
           <div class="role">Faculty</div>
+          <div class="team-programs">Mini Mathletes</div>
+          <a class="email-btn" href="mailto:msimril@wcsmiami.org">Email</a>
         </div>
 
       </div>
@@ -689,5 +1176,22 @@
     </p>
   </div>
 
+  <script>
+    function showPathwayTab(e, id) {
+      document.querySelectorAll('.pathway-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.pathway-panel').forEach(p => p.classList.remove('active'));
+      e.currentTarget.classList.add('active');
+      document.getElementById(id).classList.add('active');
+    }
+
+    function goToPathway(id) {
+      document.querySelectorAll('.pathway-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.pathway-panel').forEach(p => p.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      const tabIndex = { 'pathway-head': 0, 'pathway-heart': 1, 'pathway-hands': 2 };
+      document.querySelectorAll('.pathway-tab')[tabIndex[id]].classList.add('active');
+      document.querySelector('.pathway-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  </script>
 </body>
 </html>
